@@ -180,6 +180,82 @@ The system can be tested by exposing the flame sensor to a small, controlled fla
 - The prototype is intended as an educational demonstration and not as a certified fire-safety system.
 - Detection and suppression performance depends on sensor placement, pump capacity, water supply, and power availability.
 
+## Results
+
+The developed prototype successfully demonstrates the basic concept of automatic fire detection and water-based suppression.
+
+When a flame is detected by the flame sensor, the Arduino UNO processes the sensor signal and activates the water-pump control. Water is then supplied from the storage tank through the pipe and nozzle toward the fire.
+
+The project demonstrates the integration of:
+
+- Flame sensing
+- Arduino-based control
+- Automatic pump activation
+- Water-based fire suppression
+- Basic embedded-system automation
+
+## Applications
+
+The concept can be adapted for:
+
+- Educational fire-safety prototypes
+- Small robotic fire-fighting demonstrations
+- Industrial fire-monitoring concepts
+- Automated fire detection systems
+- Robotics and embedded-system projects
+
+## Future Scope
+
+The system can be further improved by adding:
+
+- Multiple flame sensors for wider detection
+- Temperature and smoke sensors
+- Automatic directional control of the nozzle
+- Wireless monitoring and alerts
+- Remote control and monitoring
+- Improved pump-pressure control
+- Larger water storage capacity
+- Obstacle detection and autonomous navigation
+- Camera-based fire detection
+
+## Technologies Used
+
+- Arduino UNO
+- Embedded C / Arduino programming
+- Flame sensing
+- Relay / pump-driver control
+- Basic robotics
+- Embedded systems
+- Water-based fire suppression
+
+## Project Type
+
+**First-Year Engineering Project**
+
+**Domain:** Embedded Systems, Robotics & Automation
+
+## Repository Structure
+
+Automatic-Fire-Detection-and-Suppression-System/
+│
+├── code/
+│   └── fire_detection_suppression.ino
+│
+├── diagrams/
+│   └── fire_system_diagrams.png
+│
+├── images/
+│   ├── project_front.jpg
+│   ├── project_rear.jpg
+│   ├── electronics.jpg
+│   └── water_pump.jpg
+│
+└── README.md
+
+**AUTHOR**
+**Gaurav Paste**
+**Electronics & Telecommunication Engineering**
+
 ## Key Features
 Automatic flame detection
 Arduino-based control
