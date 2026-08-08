@@ -122,15 +122,65 @@ text
                   v
           Fire Suppression
 
-Hardware
+## Hardware
 The hardware consists of an Arduino Uno, flame-sensing unit, robotic vehicle, water storage system, water pump, pipe and nozzle mechanism.
 The water storage system is mounted at the rear of the robotic vehicle. When fire is detected, the suppression mechanism delivers water toward the fire through the pipe and nozzle.
 
-Software
+## Software
 The system is programmed using the Arduino IDE
 The Arduino program reads the digital output of the flame sensor and controls the waterpump activation based on the detected condition
 
-Key Features
+## How to Run
+
+### Requirements
+
+- Arduino UNO
+- Flame Sensor Module
+- Water Pump
+- Relay Module / Pump Driver
+- Water Storage Tank
+- Pipe and Nozzle
+- Suitable Power Supply
+- Arduino IDE
+- Connecting Wires
+
+### Steps
+
+1. Connect the flame sensor digital output to Arduino UNO pin D2.
+2. Connect the pump-control input to Arduino UNO pin D8 through an appropriate relay or pump driver.
+3. Connect the flame sensor VCC and GND to the Arduino power supply.
+4. Connect the water pump to its appropriate external power supply through the relay/driver.
+5. Upload `fire_detection_suppression.ino` to the Arduino UNO using the Arduino IDE.
+6. Place a small water container at the rear of the robotic platform.
+7. Connect the water pipe and nozzle to the pump outlet.
+8. Power ON the system.
+9. Place a controlled flame within the detection range of the flame sensor.
+10. When the flame is detected, the Arduino activates the pump and water is sprayed through the nozzle.
+11. After the suppression cycle, the pump is switched OFF and the system resumes monitoring.
+
+## Testing
+
+The system can be tested by exposing the flame sensor to a small, controlled flame.
+
+### Expected Behavior
+
+| Condition | Flame Sensor | Pump |
+|---|---|---|
+| No flame detected | No fire signal | OFF |
+| Flame detected | Fire signal | ON |
+| Suppression cycle completed | Monitoring | OFF |
+
+> **Safety:** Testing should be performed in a controlled environment with appropriate fire-safety precautions. Do not test near flammable materials or uncontrolled fire.
+
+## Limitations
+
+- The prototype detects flame within the sensor's effective range.
+- The system does not autonomously navigate toward the fire.
+- Water-based suppression is not suitable for every type of fire.
+- The prototype is intended as an educational demonstration and not as a certified fire-safety system.
+- Detection and suppression performance depends on sensor placement, pump capacity, water supply, and power availability.
+
+## Key Features
 Automatic flame detection
 Arduino-based control
 Automatic water-based fire suppression
@@ -138,7 +188,7 @@ Mobile robotic platform
 Integrated water storage system
 Sensor-based response
 
-Learning Outcomes
+## Learning Outcomes
 Through this project, we gained practical experience in:
 Arduino programming
 Flame sensor interfacing
