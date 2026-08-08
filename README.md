@@ -124,3 +124,23 @@ System Block Diagram and Flowchart
 The following diagram illustrates the overall architecture and operating flow of the fire detection and suppression system.
 
 ![System Block Diagram and Flowchart](diagrams/fire_system_diagrams.png)
+
+## Project Gallery
+
+The following images are illustrative visualizations of the proposed project setup and are included to demonstrate the system structure and component arrangement.
+
+### Front View
+
+![Project Front View](images/project_front.jpg)
+
+### Rear View – Water Storage System
+
+![Project Rear View](images/project_rear.jpg)
+
+### Electronics and Components
+
+![Electronics and Components](images/electronics.jpg)
+
+### Water Pump and Suppression Mechanism
+
+![Water Pump](images/water_pump.jpg)
