@@ -118,3 +118,9 @@ Wireless monitoring
 Temperature and smoke sensors
 Improved water-pressure control
 Remote monitoring and control
+
+System Block Diagram and Flowchart
+
+The following diagram illustrates the overall architecture and operating flow of the fire detection and suppression system.
+
+![System Block Diagram and Flowchart](diagrams/fire_system_diagrams.png)
