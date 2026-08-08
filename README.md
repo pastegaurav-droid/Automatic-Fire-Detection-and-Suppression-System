@@ -16,18 +16,63 @@ This project was developed as a first-year engineering project to demonstrate th
 - To integrate fire detection and suppression into a mobile robotic platform.
 - To gain practical experience in Arduino programming and embedded systems.
 
+## Components Used
+
+| Component | Purpose |
+|---|---|
+| Arduino UNO | Main controller for processing the flame sensor signal |
+| Flame Sensor | Detects the presence of flame/fire |
+| Water Pump | Pumps water when fire is detected |
+| Water Storage Tank | Stores water for fire suppression |
+| Pipe/Tube | Carries water from the tank to the nozzle |
+| Nozzle | Directs the water toward the detected fire |
+| Power Supply/Battery | Provides power to the system |
+| Connecting Wires | Electrical connections between components |
+
+## Pin Configuration
+
+| Component | Arduino UNO Pin | Function |
+|---|---|---|
+| Flame Sensor | D2 | Digital fire detection input |
+| Water Pump Control | D8 | Pump activation output |
+
+> **Note:** The water pump should be operated through an appropriate driver such as a relay module or transistor/MOSFET circuit rather than being powered directly from an Arduino GPIO pin.
+
+## Hardware Connections
+
+### Flame Sensor
+
+Flame Sensor
+     │
+     ├── VCC → Arduino 5V
+     ├── GND → Arduino GND
+     └── DO  → Arduino D2
+
+Water pump control 
+
+Arduino UNO D8
+      │
+      ↓
+Relay / Pump Driver
+      │
+      ↓
+Water Pump
+      │
+      ↓
+Water Storage Tank
+      │
+      ↓
+Pipe / Nozzle
+
 ## Working Principle
-
-The system works in the following sequence:
-
-1. The flame sensor continuously detects the surrounding area for the presence of fire.
-2. When fire is detected, the flame sensor sends a signal to the Arduino Uno.
-3. The Arduino processes the sensor signal according to the programmed logic.
-4. The fire-suppression mechanism is activated.
-5. Water is supplied from the storage container mounted at the rear of the robotic vehicle.
-6. The water passes through the connected pipe.
-7. The nozzle directs the water toward the detected fire.
-8. The water spray helps suppress the fire.
+1. The flame sensor continuously monitors the surrounding area for a flame.
+2. The sensor sends a digital signal to the Arduino UNO.
+3. When a flame is detected, the Arduino identifies the fire condition.
+4. The Arduino activates the water-pump control output.
+5. The pump supplies water from the storage tank through the pipe and nozzle.
+6. Water is sprayed toward the fire for suppression.
+7. After the suppression cycle, the pump is switched OFF.
+8. The system returns to monitoring mode.
 
 ## Main Components
 
@@ -82,9 +127,8 @@ The hardware consists of an Arduino Uno, flame-sensing unit, robotic vehicle, wa
 The water storage system is mounted at the rear of the robotic vehicle. When fire is detected, the suppression mechanism delivers water toward the fire through the pipe and nozzle.
 
 Software
-Arduino IDE
-Embedded C/C++
-Arduino Uno
+The system is programmed using the Arduino IDE
+The Arduino program reads the digital output of the flame sensor and controls the waterpump activation based on the detected condition
 
 Key Features
 Automatic flame detection
